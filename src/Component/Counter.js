@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
+import { useDispatch, useSelector } from "react-redux";
+import { addCount, removeCount } from "./Action/Action";
+
+
 
 const Counter = () => {
-    const [count,setCount]=useState(0);
-
+    
+    const count=useSelector(state=>state.count)
+    const dispatch=useDispatch()
     const handleAdd=()=>{
-        setCount((count)=>count+1);
+       dispatch(addCount())
     }
     const handleRemove=()=>{
-        setCount((count)=>count-1);
+        dispatch(removeCount())
     }
     const handleReset=()=>{
         setCount((count)=>count=0);
