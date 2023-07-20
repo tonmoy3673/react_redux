@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { addCount, removeCount } from "./Action/Action";
+import { addCount, removeCount, resetCount } from "./Action/Action";
 
 
 
@@ -14,7 +14,7 @@ const Counter = () => {
         dispatch(removeCount())
     }
     const handleReset=()=>{
-        setCount((count)=>count=0);
+        dispatch(resetCount());
     }
 
     return (
