@@ -1,29 +1,10 @@
-import { useDispatch, useSelector } from "react-redux";
-import { addCount, removeCount, resetCount } from "./Action/Action";
-
-
+import React from 'react';
 
 const Counter = () => {
-    
-    const count=useSelector(state=>state.count)
-    const dispatch=useDispatch()
-    const handleAdd=()=>{
-       dispatch(addCount())
-    }
-    const handleRemove=()=>{
-        dispatch(removeCount())
-    }
-    const handleReset=()=>{
-        dispatch(resetCount());
-    }
-
     return (
         <div>
-            <h2>React Counter App</h2>
-            <h3>Count : {count}</h3>
-            <button onClick={handleAdd}>Add</button>
-            <button onClick={handleRemove}>Remove</button>
-            <button onClick={handleReset}>Reset</button>
+            <h2>Counter App</h2>
+            <h3>Count : 0</h3>
         </div>
     );
 };
