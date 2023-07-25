@@ -1,7 +1,10 @@
 
 
 const initialCount={
-    count:0
+    count:0,
+    isLoading:false,
+    todo:[],
+    error:null,
 }
 
 const Reducer = (state=initialCount,action) => {
