@@ -40,7 +40,15 @@ const Counter = () => {
             {
                 error && <h3>{error.message}:'Not Found'</h3>
             }
-            
+            <section>
+                {
+                    todo.map(list=>{
+                        return <article key={list.id}>
+                        <h5>{list.title}</h5>
+                    </article>
+                    })
+                }
+            </section>
         </div>
     );
 };
