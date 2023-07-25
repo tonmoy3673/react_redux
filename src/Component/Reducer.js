@@ -5,7 +5,7 @@ const initialCount={
     isLoading:false,
     todo:[],
     error:null,
-}
+};
 
 const Reducer = (state=initialCount,action) => {
    
@@ -24,7 +24,29 @@ const Reducer = (state=initialCount,action) => {
                 return{
                     ...state,
                     count:state.count-1,
-                }
+                };
+                case 'REQUEST':
+                    return{
+                        ...state,
+                        isLoading:true,
+
+                    };
+                    case 'SHOW':
+                    return{
+                        ...state,
+                        isLoading:false,
+                        todo:action.payload,
+                        
+                    };
+                    case 'FAIL':
+                    return{
+                        ...state,
+                        isLoading:false,
+                        error:action.payload,
+                        
+                    };
+                    
+                
     
         default:
           return  state;

@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addCount, removeCount, resetCount } from './Action/Action';
+import { todoAllAction } from './Action/TodoAction';
 
 
 
 const Counter = () => {
   const count=useSelector(state=>state.count);
+  
+    
+  const {isLoading,error,todo}=useSelector(state=>state);
+    
   const dispatch=useDispatch();
+  useEffect(()=>{
+    dispatch(todoAllAction())
+  },[])
   const handleAdd=()=>{
     dispatch(addCount())
   }
@@ -25,6 +33,14 @@ const Counter = () => {
                 <button onClick={handleReset}>Reset</button>
                 <button onClick={handleRemove}>Remove</button>
             </div>
+            <h1>Todo List</h1>
+            {
+                isLoading &&  <h3>Loading :'Not Found' </h3> 
+            }
+            {
+                error && <h3>{error.message}:'Not Found'</h3>
+            }
+            
         </div>
     );
 };
