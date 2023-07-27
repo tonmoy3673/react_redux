@@ -1,16 +1,19 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { ADD } from './CounterSlice';
 
 
 
 const Count = () => {
     const count=useSelector(state=>state.count.count);
-    console.log(count)
+    const dispatch=useDispatch()
+    
     return (
         <div>
             <h1>Count App with ToolKit</h1>
             <div>
-                <h3>Count : 0</h3>
+                <h3>Count : {count}</h3>
+                <button onClick={()=>dispatch(ADD())}>ADD</button>
             </div>
         </div>
     );
