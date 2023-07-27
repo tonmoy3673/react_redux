@@ -16,5 +16,8 @@ export const CounterSlice=createSlice({
         REMOVE : state=>{
             state.count=state.count-1
         }
-    }
-})
+    },
+
+});
+export const {ADD,RESET,REMOVE}=CounterSlice.actions;
+export default CounterSlice.reducers;
