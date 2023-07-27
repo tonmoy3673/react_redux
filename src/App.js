@@ -1,14 +1,15 @@
 
 import './App.css';
-import Counter from './Component/Counter';
+import Count from './Component/Count';
+
 
 
 function App() {
   return (
     <div className="App">
       <h1>React-Redux</h1>
-      <Counter/>
-    
+     
+      <Count/>
     </div>
   );
 }
