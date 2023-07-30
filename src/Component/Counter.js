@@ -4,24 +4,9 @@ import { addCount, removeCount, resetCount } from './Action/Action';
 import { todoAction } from './Action/TodoAction';
 
 const Counter = () => {
-    const count=useSelector(state=>state.count);
-    const {isLoading,error,todo}=useSelector(state=>state)
-    const dispatch=useDispatch();
+   
 
-    useEffect(()=>{
-        dispatch(todoAction())
-    },[])
-
-    const handleAdd=()=>{
-        dispatch(addCount())
-    };
-    const handleReset=()=>{
-        dispatch(resetCount())
-    };
-
-    const handleRemove=()=>{
-        dispatch(removeCount())
-    };
+  
 
     return (
         <div>
