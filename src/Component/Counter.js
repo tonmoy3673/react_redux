@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React  from 'react';
 
 const Counter = () => {
    
@@ -8,7 +8,7 @@ const Counter = () => {
     return (
         <div>
             <h2> React Redux Counter App</h2>
-            
+            <h3> Count: 0</h3>
 
         </div>
     );
