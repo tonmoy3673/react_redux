@@ -1,6 +1,9 @@
 
 const initialState={
     count:0,
+    isLoading:false,
+    todo:[],
+    error:null,
 }
 
 const Reducer = (state=initialState,action) => {
