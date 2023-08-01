@@ -1,15 +1,17 @@
+
+
 export const addCount=()=>{
-    return{
-        type:'ADD'
-    }
-};
+   return{
+    type:'ADD'
+   }
+}
 export const resetCount=()=>{
     return{
-        type:'RESET'
+     type:'RESET'
     }
-};
-export const removeCount=()=>{
+ }
+ export const removeCount=()=>{
     return{
-        type:'REMOVE'
+     type:'REMOVE'
     }
-};
+ }
