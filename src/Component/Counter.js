@@ -5,8 +5,12 @@ import { addCount, removeCount, resetCount } from './Action/Action';
 
 const Counter = () => {
    
-const count=useSelector(state=>(state.count))
+
+const {isLoading,error,todo,count}=useSelector(state=>state)
+console.log(count)
   const dispatch=useDispatch();
+
+
 
   const handleAdd=()=>{
    dispatch(addCount());
