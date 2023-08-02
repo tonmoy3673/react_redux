@@ -36,7 +36,9 @@ console.log(count)
             {
                 isLoading && <h4>...Loading: 'Not Found'</h4>
             }
-        
+            {
+                error && <h4>{error.message} : 'Null'</h4>
+            }
         </div>
     );
 };
