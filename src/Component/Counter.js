@@ -1,15 +1,18 @@
-import React  from 'react';
+import React, { useEffect }  from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addCount, removeCount, resetCount } from './Action/Action';
-
+import { todoAction } from './Action/TodoAction';
 
 const Counter = () => {
    
 
 const {isLoading,error,todo,count}=useSelector(state=>state)
-console.log(count)
+console.log(todo)
   const dispatch=useDispatch();
 
+  useEffect(()=>{
+    dispatch(todoAction())
+  },[])
 
 
   const handleAdd=()=>{
@@ -34,11 +37,24 @@ console.log(count)
 
             <h2>React Redux Todo  List</h2>
             {
-                isLoading && <h4>...Loading: 'Not Found'</h4>
+                isLoading && <h4>...Loading:</h4>
             }
             {
-                error && <h4>{error.message} : 'Null'</h4>
+                error && <h4>{error.message} :'Not Found' </h4> 
             }
+            <section>
+                {
+                    todo && todo.map((list)=>{
+                        return <article key={list.id}>
+
+                            <h4>Title: {list.title}</h4>
+                            <h4>Id: {list.id}</h4>
+                        </article>
+                    })
+                }
+            </section>
+
+
         </div>
     );
 };

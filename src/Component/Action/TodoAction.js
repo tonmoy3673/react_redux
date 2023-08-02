@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 
-export const TodoAction = ()=>async(dispatch) => {
+export const todoAction = ()=>async(dispatch) => {
     
     dispatch({type:'RES'})
     try {
