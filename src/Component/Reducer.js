@@ -27,23 +27,7 @@ const Reducer = (state=initialState,action) => {
                 ...state,
                 count:state.count-1,
             }
-            case 'RES':
-            return{
-                ...state,
-                isLoading:true,
-            }
-            case 'SHOW':
-            return{
-                ...state,
-                isLoading:false,
-                todo:action.payload
-            }
-            case 'FAIL':
-            return{
-                ...state,
-                isLoading:false,
-                error:action.payload
-            }
+       
     
         default:
             return state;
@@ -52,5 +36,5 @@ const Reducer = (state=initialState,action) => {
 
 
 
-store.dispatch(fetchData())
+
 export default Reducer;
