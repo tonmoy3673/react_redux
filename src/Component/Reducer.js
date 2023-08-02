@@ -1,7 +1,4 @@
-import axios from "axios";
-import { resTodo } from "./Action/TodoAction";
-import { applyMiddleware, createStore } from "redux";
-import thunk from "redux-thunk";
+
 
 const initialState={
     count:0,
