@@ -32,6 +32,11 @@ console.log(count)
                 <button onClick={handleRemove}>Remove</button>
             </div>
 
+            <h2>React Redux Todo  List</h2>
+            {
+                isLoading && <h4>...Loading: 'Not Found'</h4>
+            }
+        
         </div>
     );
 };
