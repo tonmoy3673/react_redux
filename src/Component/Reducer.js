@@ -50,32 +50,7 @@ const Reducer = (state=initialState,action) => {
     }
 };
 
-const fetchData=()=>{
-    return(dispatch)=>{
-        dispatch(resTodo())
-        axios.get('https://jsonplaceholder.typicode.com/todos')
-        .then(res=>{
-            const myTodo=res.data
-          
-            const title=myTodo.map(list=>list.title)
-            console.log(title)
-            dispatch(resTodo(title))
-        })
-        .catch((error)=>{
-            const errorSms=error.message
-            dispatch(errorSms)
-        })
-            
-    }
-
-}
 
 
-
-
- const store=createStore(Reducer,applyMiddleware(thunk));
-store.subscribe(()=>{
-    console.log(store.getState())
-})
 store.dispatch(fetchData())
 export default Reducer;
