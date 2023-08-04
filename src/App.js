@@ -1,6 +1,7 @@
 
 import './App.css';
-import MyTodo from './Component/MyTodo';
+import Count from './Component/Count';
+
 
 
 
@@ -9,8 +10,8 @@ function App() {
   return (
     <div className="App">
       <h1>React-Redux</h1>
-     
-    <MyTodo/>
+     <Count/>
+    
     </div>
   );
 }
