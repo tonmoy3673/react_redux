@@ -8,7 +8,7 @@ const MyTodo = () => {
     const dispatch=useDispatch();
     useEffect(()=>{
         dispatch(TodoAction())
-    },[])
+    },[ ])
     return (
         <div>
             <h2>My Todo List</h2>
