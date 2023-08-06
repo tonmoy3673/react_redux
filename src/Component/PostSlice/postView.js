@@ -1,11 +1,15 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { fetchPosts } from './PostSlice';
 
 const PostView = () => {
 
     const {isLoading,error,posts}=useSelector(state=>(state.posts))
     const dispatch=useDispatch();
+    useEffect(()=>{
+        dispatch(fetchPosts())
+    },[])
     return (
         <div>
             <h2>All Posts with Redux</h2>
@@ -19,7 +23,8 @@ const PostView = () => {
             <section>
                 {
                     posts && posts.map((list)=><article key={list.id}>
-                        return <h4>
+                        
+                            <h4>
                            
                             Title:{list.title}
                         </h4>
@@ -27,6 +32,7 @@ const PostView = () => {
                            
                             All Posts:{list.body}
                         </h4>
+                        
                     </article>)
                 }
             </section>
