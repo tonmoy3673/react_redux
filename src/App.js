@@ -1,6 +1,7 @@
 
 import './App.css';
 import Counter from './Component/Counter';
+import PostView from './Component/PostSlice/PostView';
 
 
 
@@ -14,7 +15,7 @@ function App() {
       <h1>React-Redux</h1>
      
      <Counter/>
-    
+    <PostView/>
     </div>
   );
 }

@@ -24,7 +24,7 @@ export const PostSlice=createSlice({
         state.post=action.payload;
         state.error=null;
    });
-   builder.addCase(fetchPost.pending,(state,action)=>{
+   builder.addCase(fetchPost.rejected,(state,action)=>{
     state.isLoading=true;
     state.error=action.error.message;
 });
