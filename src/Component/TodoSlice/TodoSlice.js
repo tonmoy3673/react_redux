@@ -14,11 +14,25 @@ export const TodoSlice=createSlice({
         error:null
     },
     extraReducers:(builder)=>{
-        builder.addCase(fetchTodo,(state)=>{
+        builder.addCase(fetchTodo.pending,(state)=>{
             state.isLoading=true;
             state.todo=[];
             state.error=null
 
         });
+        builder.addCase(fetchTodo.fulfilled,(state,action)=>{
+            state.isLoading=false;
+            state.todo=action.payload;
+            state.error=null
+
+        });
+        builder.addCase(fetchTodo.fulfilled,(state,action)=>{
+            state.isLoading=false;
+            state.todo=[];
+            state.error=action.error.message
+
+        });
     }
-})
+});
+
+export default TodoSlice.reducer;
