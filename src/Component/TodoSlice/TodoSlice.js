@@ -2,7 +2,8 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const fetchTodo=createAsyncThunk('todo/fetchTodo',async()=>{
-    const res=await axios.get()
+    const res=await axios.get('https://jsonplaceholder.typicode.com/todos')
+    return res.data
 })
 
 export const TodoSlice=createSlice({
@@ -13,6 +14,11 @@ export const TodoSlice=createSlice({
         error:null
     },
     extraReducers:(builder)=>{
+        builder.addCase(fetchTodo,(state)=>{
+            state.isLoading=true;
+            state.todo=[];
+            state.error=null
 
+        });
     }
 })
