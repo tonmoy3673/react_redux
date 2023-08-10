@@ -1,8 +1,10 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 const TodoView = () => {
-    const {isLoading,error,todo}=useSelector((state)=>(state.todo))
+    const {isLoading,error,todo}=useSelector((state)=>(state.todo));
+    const dispatch=useDispatch();
+    
     return (
         <div>
             <h2>Todo List by React Redux Toolkit</h2>
@@ -18,7 +20,7 @@ const TodoView = () => {
                         todo && todo.map((list)=>
                         
                         {
-                            return <article>
+                            return <article key={list.id}>
                                     <h4>User ID : {list.userId}</h4>
                                     <h4>User ID : {list.title}</h4>
                             </article>
