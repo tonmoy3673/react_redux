@@ -1,5 +1,8 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
+export const fetchComments=createAsyncThunk('comments/fetchComments',async()=>{
+
+});
 
 export const CommentSlice =createSlice({
     name:'Comments',
@@ -8,6 +11,8 @@ export const CommentSlice =createSlice({
         comments:[],
         error:null
     },
+    extraReducers:(builder)=>{
     
+    }
 });
 
