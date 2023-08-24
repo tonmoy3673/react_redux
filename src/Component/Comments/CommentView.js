@@ -23,8 +23,9 @@ const CommentView = () => {
             <section>
                 {
                 comments && comments.map((list)=>
-                <article>
+                <article key={list.id}>
                     <h4>Name : {list.name}</h4>
+                <h4>Comments : {list.body? list.body :'Not Found'}</h4>
                 </article>)
                 }
             </section>
