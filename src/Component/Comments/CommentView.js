@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { fetchComment } from './CommentSlice';
+
 
 const CommentView = () => {
 
-    const {isLoading,error,comments}=useSelector((state)=>state)
+    const {isLoading,error,comments}=useSelector((state)=>(state.comments));
+  
     const dispatch=useDispatch();
+    useEffect(()=>{
+        dispatch(fetchComment())
+    },[])
     return (
         <div>
             <h3>All Comments</h3>
@@ -16,12 +22,10 @@ const CommentView = () => {
             }
             <section>
                 {
-                    comments.map((list)=><article>
-                       return 
-                            <h4>Name : {list.name}</h4>
-                            <h4>Comments : {list.body}</h4>
-                        
-                    </article>)
+                comments && comments.map((list)=>
+                <article>
+                    <h4>Name : {list.name}</h4>
+                </article>)
                 }
             </section>
         </div>
