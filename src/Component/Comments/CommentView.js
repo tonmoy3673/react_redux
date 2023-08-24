@@ -25,6 +25,7 @@ const CommentView = () => {
                 comments && comments.map((list)=>
                 <article key={list.id}>
                     <h4>Name : {list.name}</h4>
+                    <h4>Email : {list.email}</h4>
                 <h4>Comments : {list.body? list.body :'Not Found'}</h4>
                 </article>)
                 }
