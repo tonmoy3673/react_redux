@@ -7,5 +7,8 @@ export const CommentSlice=createSlice({
         isLoading:false,
         comments:[],
         error:null
+    },
+    extraReducers:(builder)=>{
+        
     }
 })
