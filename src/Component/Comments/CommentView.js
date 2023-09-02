@@ -22,7 +22,7 @@ const CommentView = () => {
             }
             <section>
                 {
-                comments.length >6 && comments.slice(1,6).map((list)=>
+                comments.length >6 && comments.slice(0,6).map((list)=>
                 <article key={list.id}>
                     <h4>Name : {list.name}</h4>
                     <h4>Email : {list.email}</h4>
