@@ -15,10 +15,13 @@ export const CounterSlice=createSlice({
         },
         REMOVE:(state)=>{
             state.count=state.count-1
+        },
+        ADD10:(state,action)=>{
+            state.count=state.count+action.payload
         }
         
     }
 });
 
-export const {ADD,RESET,REMOVE}=CounterSlice.actions;
+export const {ADD,RESET,REMOVE,ADD10}=CounterSlice.actions;
 export default CounterSlice.reducer;
