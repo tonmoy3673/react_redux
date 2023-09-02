@@ -7,7 +7,15 @@ export const CounterSlice=createSlice({
     },
 
     reducers:{
-        type:'ADD',
+        ADD:(state)=>{
+            state.count=state.count+1
+        },
+        RESET:(state)=>{
+            state.count=0
+        },
+        REMOVE:(state)=>{
+            state.count=state.count-1
+        }
         
     }
 })
