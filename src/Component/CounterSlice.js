@@ -18,4 +18,7 @@ export const CounterSlice=createSlice({
         }
         
     }
-})
+});
+
+export const {ADD,RESET,REMOVE}=CounterSlice.actions;
+export default CounterSlice.reducer;
