@@ -23,10 +23,19 @@ export const PostSlice=createSlice({
 
     builder.addCase(fetchPost.fulfilled,(state,action)=>{
         state.isLoading=false;
-        state.post=state.payload
+        state.post=action.payload
         state.error=null
 
-    })
+    });
+    builder.addCase(fetchPost.fulfilled,(state,action)=>{
+        state.isLoading=false;
+        state.post=state.payload
+        state.error=action.error.message
+
+    });
     
     }
-})
+});
+
+export const {isLoading,post,error}=PostSlice.actions;
+export default PostSlice.reducer;
