@@ -15,6 +15,18 @@ export const PostSlice=createSlice({
         error:null,
     },
     extraReducers:builder=>{
-    builder.addCase()
+    builder.addCase(fetchPost.pending,(state)=>{
+        state.isLoading=true;
+        state.post=[];
+        state.error=null
+    });
+
+    builder.addCase(fetchPost.fulfilled,(state,action)=>{
+        state.isLoading=false;
+        state.post=state.payload
+        state.error=null
+
+    })
+    
     }
 })
