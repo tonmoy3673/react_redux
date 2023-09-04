@@ -6,8 +6,6 @@ const Counter = () => {
     const {count}=useSelector((state)=>(state.count));
    
     const dispatch=useDispatch();
-    
-
     return (
         <div>
             <h2>React Redux Counter </h2>
