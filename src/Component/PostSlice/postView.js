@@ -23,9 +23,9 @@ const PostView = () => {
                 }
                 <article>
                     {
-                       post && post.map((list)=>{
+                       post.length>10 && post.slice(0,10).map((list)=>{
                         return <section key={list.id}>
-                            <h4>Title : {list.title}</h4>
+                            <h4>Title :{list.id} {list.title} </h4>
                             <h5>Info : {list.body}</h5>
                         </section>
                        })
