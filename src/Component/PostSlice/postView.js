@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 const PostView = () => {
-    const {isLoading,error,post}=useSelector((state)=>console.log(state.post))
+    const {isLoading,error,post}=useSelector((state)=>(state.post))
     return (
         <div>
             <h2>All Posts</h2>
