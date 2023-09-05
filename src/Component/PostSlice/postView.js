@@ -1,9 +1,14 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchPost } from './PostSlice';
 
 const PostView = () => {
     const {isLoading,error,post}=useSelector((state)=>(state.post));
 
+    const dispatch=useDispatch();
+    useEffect(()=>{
+      dispatch(fetchPost())  
+    },[null])
 
     return (
         <div>
@@ -16,6 +21,17 @@ const PostView = () => {
                 {
                     error && <h4>{error.message}</h4>
                 }
+                <article>
+                    {
+                       post && post.map((list)=>{
+                        return <section key={list.id}>
+                            <h4>Title : {list.title}</h4>
+                            <h5>Info : {list.body}</h5>
+                        </section>
+                       })
+                    }
+
+                </article>
             </section>
         </div>
     );

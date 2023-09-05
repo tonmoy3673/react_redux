@@ -7,7 +7,7 @@ const TodoView = () => {
     const dispatch=useDispatch();
     useEffect(()=>{
         dispatch(fetchTodo())
-    },[])
+    },[null])
     return (
         <div>
             <h2>Todo List by React Redux Toolkit</h2>

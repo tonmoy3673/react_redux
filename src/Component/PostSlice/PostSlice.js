@@ -37,5 +37,5 @@ export const PostSlice=createSlice({
     }
 });
 
-export const {isLoading,post,error}=PostSlice.actions;
+
 export default PostSlice.reducer;
