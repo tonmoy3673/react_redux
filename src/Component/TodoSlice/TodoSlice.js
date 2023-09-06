@@ -17,6 +17,19 @@ export const TodoSlice=createSlice({
             state.isLoading=true;
             state.todo=[];
             state.error=null
+        });
+        builder.addCase(fetchTodo.fulfilled,(state,action)=>{
+            state.isLoading=false;
+            state.todo=action.payload;
+            state.error=null
+
+        });
+        builder.addCase(fetchTodo.rejected,(state,action)=>{
+            state.isLoading=false;
+            state.todo=[];
+            state.error=action.payload.message;
         })
     }
-})
+});
+
+export default TodoSlice.reducer;
