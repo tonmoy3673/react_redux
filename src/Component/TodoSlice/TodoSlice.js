@@ -1,5 +1,8 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
+export const fetchTodo=createAsyncThunk('todo/fetchTodo',async()=>{
+    
+})
 export const TodoSlice=createSlice({
     name:'todo',
     initialState:{
@@ -7,5 +10,7 @@ export const TodoSlice=createSlice({
         todo:[],
         error:null
     },
-    
+    extraReducers:builder=>{
+
+    }
 })
