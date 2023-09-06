@@ -1,9 +1,13 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchTodo } from './TodoSlice';
 
 const TodoView = () => {
     const {isLoading,error,todo}=useSelector((state)=>(state.todo));
-
+    const dispatch=useDispatch();
+    useEffect(()=>{
+        dispatch(fetchTodo())
+    },[null])
     return (
         <div>
             <h2>Todo Lists</h2>
