@@ -21,7 +21,7 @@ const TodoView = () => {
                 <article>
                     {
                         todo && todo.map((list)=><section>
-                            
+                            <h4>Title : {list.id} {list.title}</h4>
                         </section>)
                     }
                 </article>
