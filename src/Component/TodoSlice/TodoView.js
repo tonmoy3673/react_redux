@@ -18,6 +18,13 @@ const TodoView = () => {
                 {
                     error && <h4>{error.message}</h4>
                 }
+                <article>
+                    {
+                        todo && todo.map((list)=><section>
+                            
+                        </section>)
+                    }
+                </article>
             </section>
 
         </div>
