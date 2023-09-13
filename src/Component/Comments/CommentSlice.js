@@ -15,6 +15,26 @@ export const CommentSlice =createSlice({
     },
 
     extraReducers:builder=>{
+        builder.addCase(fetchComment.pending,(state)=>{
+            state.isLoading=true;
+            state.comment=[];
+            state.error=null;
+
+        });
+        builder.addCase(fetchComment.fulfilled,(state,action)=>{
+            state.isLoading=false;
+            state.comment=action.payload;
+            state.error=null;
+
+        })
+        builder.addCase(fetchComment.rejected,(state,action)=>{
+            state.isLoading=false;
+            state.comment=[];
+            state.error=action.payload;
+
+        });
 
     }
 });
+
+export default CommentSlice.reducer;
