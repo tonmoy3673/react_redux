@@ -8,9 +8,6 @@ import TodoView from './Component/TodoSlice/TodoView';
 
 
 
-
-
-
 function App() {
   return (
     <div className="App">
