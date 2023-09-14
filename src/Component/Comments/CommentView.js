@@ -27,6 +27,7 @@ const CommentView = () => {
                     <article key={list.id}>
                         <h4>Post ID : {list.id}</h4>
                         <h4>Email : {list.email}</h4>
+                        <h4>Comments : {list.body}</h4>
                     </article>
                     )
                 }

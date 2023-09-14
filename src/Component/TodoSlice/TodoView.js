@@ -20,7 +20,7 @@ const TodoView = () => {
                 }
                 <article>
                     {
-                        todo && todo.slice(0,10).map((list)=><section>
+                        todo && todo.slice(0,10).map((list)=><section key={list.id}>
                             <h4>User ID : {list.id} </h4>
                             <h4>Title : {list.title}</h4>
                         </section>)
