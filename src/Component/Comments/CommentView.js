@@ -16,7 +16,10 @@ const CommentView = () => {
             <h3>All Comments List</h3>
             <section>
             {
-
+                isLoading && <h4>Loading ..... </h4>
+            }
+            {
+                error && <h4>{error.message}</h4>
             }
             </section>
         </div>
