@@ -9,7 +9,7 @@ export const store=configureStore({
         post:PostReducer,
         todo:TodoReducer,
        count:CounterReducer,
-       comment:CommentReducer
+       comment:CommentReducer,
        
     }
 });

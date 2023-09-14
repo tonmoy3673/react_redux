@@ -4,7 +4,7 @@ import { fetchComment } from './CommentSlice';
 
 
 const CommentView = () => {
-    const {isLoading,error,comment}=useSelector((state)=>(state.comment));
+    const {isLoading,error}=useSelector((state)=>(state.comment));
     const dispatch=useDispatch();
     useEffect(()=>{
        dispatch(fetchComment());
