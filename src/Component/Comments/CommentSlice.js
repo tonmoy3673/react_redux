@@ -30,7 +30,7 @@ export const CommentSlice =createSlice({
         builder.addCase(fetchComment.rejected,(state,action)=>{
             state.isLoading=false;
             state.comment=[];
-            state.error=action.payload;
+            state.error=action.payload.message;
 
         });
 

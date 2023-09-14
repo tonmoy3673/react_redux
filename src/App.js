@@ -16,7 +16,7 @@ function App() {
      <Counter/>
      <TodoView/>
      <PostView/>
-   <CommentView/>
+    <CommentView/>
     
  
     </div>

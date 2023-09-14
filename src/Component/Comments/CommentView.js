@@ -1,28 +1,16 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchComment } from './CommentSlice';
-
 
 const CommentView = () => {
-    const {isLoading,error}=useSelector((state)=>(state.comment));
+    const {isLoading,comment,error}=useSelector((state)=>(state.comment));
     const dispatch=useDispatch();
-    useEffect(()=>{
-       dispatch(fetchComment());
-    },[null])
+    
+
     return (
         <div>
+            <h3>All Comments List</h3>
             <section>
-                <h3>Show All Comments</h3>
 
-                <div>
-                    {
-                        isLoading && <h4>Loading ........</h4>
-                    }
-
-                    {
-                        error && <h4>${error.message}</h4>
-                    }
-                </div>
             </section>
         </div>
     );
