@@ -21,6 +21,15 @@ const CommentView = () => {
             {
                 error && <h4>{error.message}</h4>
             }
+            <div>
+                {
+                    comment && comment.map((list)=>
+                    <article>
+                        
+                    </article>
+                    )
+                }
+            </div>
             </section>
         </div>
     );
