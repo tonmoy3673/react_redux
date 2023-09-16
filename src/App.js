@@ -15,7 +15,6 @@ function App() {
      <TodoView/>
      <PostView/>
     <CommentView/>
-    
  
     </div>
   );
