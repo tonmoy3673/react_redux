@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { add, remove, reset } from './CounterSlice';
+import { add, add10, remove, reset } from './CounterSlice';
 
 const Counter = () => {
     const {count}=useSelector((state)=>(state.count));
@@ -14,6 +14,7 @@ const Counter = () => {
                     <button onClick={()=>dispatch(add())}>Add</button>
                     <button onClick={()=>dispatch(reset())}>Reset</button>
                     <button onClick={()=>dispatch(remove())}>Reset</button>
+                    <button onClick={()=>dispatch(add10(10))}>Add10</button>
                 </div>
             </section>
         </div>

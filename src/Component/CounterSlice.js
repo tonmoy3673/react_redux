@@ -17,7 +17,7 @@ export const CounterSlice=createSlice({
         state.count=state.count-1
     },
     add10:(state,action)=>{
-        state.count=action.payload
+        state.count=state.count+action.payload
     }
 
     
