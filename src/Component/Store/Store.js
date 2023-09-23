@@ -9,7 +9,6 @@ export const store=configureStore({
     reducer:{
         count:CounterReducer,
         post:PostReducer,
-        todo:TodoReducer,
         comment:CommentReducer
        
     }
