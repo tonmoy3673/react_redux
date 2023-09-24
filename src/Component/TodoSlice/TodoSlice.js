@@ -15,7 +15,11 @@ export const TodoSlice=createSlice({
     },
 
     extraReducers:builder=>{
-
+        builder.addCase(fetchTodo.pending,(state)=>{
+            state.isLoading=true;
+            state.todo=[];
+            state.error=null;
+        })
     }
 
 });
