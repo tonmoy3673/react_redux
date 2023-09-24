@@ -36,3 +36,5 @@ export const TodoSlice=createSlice({
     }
 
 });
+
+export default TodoSlice.reducer;
