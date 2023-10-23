@@ -14,6 +14,8 @@ const Count = () => {
                 return {count:state.count+1};
                 case "REMOVE":
                     return {count:state.count-1};
+                    case "RESET":
+                        return {count:(0)};
         
             default:
                return state;
@@ -27,6 +29,7 @@ const Count = () => {
             <div>
                 <button onClick={()=>dispatch({type:"ADD"})}>Add</button>
                 <button onClick={()=>dispatch({type:'REMOVE'})}>Remove</button>
+                <button onClick={()=>dispatch({type:'RESET'})}>Reset</button>
             </div>
         </div>
     );
