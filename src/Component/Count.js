@@ -26,7 +26,7 @@ const Count = () => {
             <h3>Count : {state.count}</h3>
             <div>
                 <button onClick={()=>dispatch({type:"ADD"})}>Add</button>
-                <button>Remove</button>
+                <button onClick={()=>dispatch({type:'REMOVE'})}>Remove</button>
             </div>
         </div>
     );
