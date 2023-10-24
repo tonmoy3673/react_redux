@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <h1>React-Redux</h1>
       <Counter/>
-     <Count/>
+     
      <PostView/>
     <CommentView/>
 
