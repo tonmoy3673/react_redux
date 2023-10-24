@@ -12,7 +12,7 @@ import PostView from './Component/PostSlice/PostView';
 function App() {
   return (
     <div className="App">
-      <h1>React-Redux</h1>
+      <h1 className='py-5 font-semibold pt-10 text-3xl'>React-Redux</h1>
    
      <Counter/>
      <PostView/>
