@@ -35,7 +35,7 @@ const Count = () => {
                 
             </div>
         </section>
-    </div>
+    </div>  
        
     );
 };
