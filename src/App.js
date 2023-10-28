@@ -3,6 +3,7 @@ import './App.css';
 import CommentView from './Component/Comments/CommentView';
 import Count from './Component/Count';
 import Counter from './Component/Counter';
+import InputForm from './Component/InputForm/InputForm';
 import PostView from './Component/PostSlice/PostView';
 
 
@@ -17,6 +18,7 @@ function App() {
    
      <Counter/>
      <Count/>
+     <InputForm/>
      <PostView/>
     <CommentView/>
 
