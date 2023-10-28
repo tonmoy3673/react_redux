@@ -16,7 +16,6 @@ const InputForm = () => {
 
     const reducer=(state=initialState,action)=>{
 
-        console.log(action);
         switch (action.type) {
             case 'INPUT':
                 return{
@@ -87,7 +86,7 @@ const InputForm = () => {
                 id='male'
                 name='gender'
                 value='male'
-              onChange={(e)=>dispatch({type:'INPUT',payload:{name:e.target.name, value:e.target.value},})}/>
+              onClick={(e)=>dispatch({type:'INPUT',payload:{name:e.target.name, value:e.target.value},})}/>
               <label className='ml-2 text-lg' htmlFor='male'>
                 Male
               </label>
@@ -98,7 +97,7 @@ const InputForm = () => {
                 id='female'
                 name='gender'
                 value='female'
-                onChange={(e)=>dispatch({type:'INPUT',payload:{name:e.target.name, value:e.target.value},})}/>
+                onClick={(e)=>dispatch({type:'INPUT',payload:{name:e.target.name, value:e.target.value},})}/>
               <label className='ml-2 text-lg' htmlFor='female'>
                 Female
               </label>
@@ -109,7 +108,7 @@ const InputForm = () => {
                 id='other'
                 name='gender'
                 value='other'
-                onChange={(e)=>dispatch({type:'INPUT',payload:{name:e.target.name, value:e.target.value},})}/>
+                onClick={(e)=>dispatch({type:'INPUT',payload:{name:e.target.name, value:e.target.value},})}/>
               <label className='ml-2 text-lg' htmlFor='other'>
                 Other
               </label>
@@ -123,7 +122,7 @@ const InputForm = () => {
           <select
             name='education'
             id='education'
-          >
+          onChange={(e)=>dispatch({type:"INPUT",payload:{name:e.target.name,value:e.target.value}})}>
             <option value='SSC'>SSC</option>
             <option value='HSC'>HSC</option>
             <option value='underGrad'>Under Graduate</option>
