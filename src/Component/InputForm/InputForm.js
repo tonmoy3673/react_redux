@@ -2,6 +2,22 @@ import React from "react";
 
 
 const InputForm = () => {
+
+    const initialState={
+        firstName:'',
+        lastName:'',
+        email:'',
+        gender:'',
+        education:'',
+        feedback:'',
+        term:false,
+        PCs:0
+    }
+
+    const reducer=(state=initialState,action)=>{
+        
+    }
+
   
 
   return (
