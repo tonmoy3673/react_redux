@@ -85,7 +85,7 @@ const InputForm = () => {
             type='email'
             name='email'
             id='email'
-          />
+          onChange={(e)=>dispatch({type:"INPUT",payload:{name:e.target.name, value:e.target.value}})}/>
         </div>
         <div className='flex flex-col w-full max-w-xs'>
           <h1 className='mb-3'>Gender</h1>
