@@ -11,7 +11,7 @@ const InputForm = () => {
         education:'',
         feedback:'',
         term:false,
-        PCs:0
+        count:0
     }
 
     const reducer=(state=initialState,action)=>{
@@ -136,7 +136,7 @@ const InputForm = () => {
               -
             </button>
             <div className='border flex-1 flex justify-center items-center h-10 rounded-md border-gray-300'>
-              <span className='text-lg'>0</span>
+              <span className='text-lg'>{state.count}</span>
             </div>
             <button className='bg-indigo-500 text-lg text-white rounded h-10 w-10'>
               +
@@ -152,7 +152,7 @@ const InputForm = () => {
             id='feedback'
             cols='30'
             rows='4'
-          ></textarea>
+          onChange={(e)=>dispatch({type:'INPUT',payload:{name:e.target.name,value:e.target.value}})}></textarea>
         </div>
 
         <div className='flex justify-between items-center w-full'>
