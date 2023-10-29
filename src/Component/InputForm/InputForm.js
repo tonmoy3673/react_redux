@@ -21,7 +21,11 @@ const InputForm = () => {
                 return{
                     ...state,
                     [action.payload.name]:action.payload.value
-            };             
+            };
+            case'ADD' :
+            return{
+              count:state.count+1
+            }            
         
             default:
             return state;
@@ -138,7 +142,7 @@ const InputForm = () => {
             <div className='border flex-1 flex justify-center items-center h-10 rounded-md border-gray-300'>
               <span className='text-lg'>{state.count}</span>
             </div>
-            <button className='bg-indigo-500 text-lg text-white rounded h-10 w-10'>
+            <button className='bg-indigo-500 text-lg text-white rounded h-10 w-10' onClick={()=>dispatch({type:'ADD'})}>
               +
             </button>
           </div>
