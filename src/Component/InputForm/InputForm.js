@@ -31,7 +31,12 @@ const InputForm = () => {
               return{
                 ...state,
                 count:state.count-1
-            };          
+            };
+            case "TERM":
+              return{
+                ...state,
+                term:!state.term
+            }        
         
             default:
             return state;
@@ -178,7 +183,7 @@ const InputForm = () => {
           <button
             className=' px-4 py-3 bg-indigo-500 rounded-md font-semibold text-white text-lg disabled:bg-gray-500'
             type='submit'
-          >
+          disabled={!state.term} onClick={()=>dispatch({type:"TERM"})}>
             Submit
           </button>
         </div>
