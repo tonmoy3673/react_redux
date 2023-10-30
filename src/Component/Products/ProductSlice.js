@@ -3,9 +3,10 @@ import axios from "axios";
 
 
 export const fetchProduct=createAsyncThunk('products/fetchProduct',async()=>{
-    const res= await axios.get('/products.json');
-    const data= await res.json();
-    console.log(data);
+    const res=await axios.get('/products.json')
+    
+    return res.data
+   
 })
 
 
